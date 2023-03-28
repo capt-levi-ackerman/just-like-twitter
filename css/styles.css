@@ -1,0 +1,370 @@
+:root{
+    --primary-color : #1DA1F2;  
+    --primary-color-dark : #118dda; 
+    --primary-color-light:  #aadaf8;  
+    --secondary-color : #f7f9fa;
+    --secondary-color-dark :#f7f9fac5;
+    --secondary-color-darkest :#d3d9dbfb;
+    --secondary-color-font : rgb(105, 105, 105);
+    --white :#ffffff; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    align-items: center;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/* Main navigation panel on left*/
+nav{
+    padding: 1%;
+    /* position: absolute;
+    background-color: var(--white); */
+    display: relative;
+    flex: 1;
+}
+.mini-logo {
+    padding: 10px 14%;
+    height: 30px;
+}
+.mini-logo:hover {
+    background-color: rgb(229, 246, 252) ;
+    border-radius: 20px ;
+}
+
+.nav-option{
+    display: flex;
+    justify-content: left;
+    width: 80%;
+    padding: 10px 3% 10px 13% ;
+    height: 40px;
+}
+.nav-option a, img, h3{
+    /* size: 25px; */
+    display: inline;
+}
+
+
+.nav-option-text{
+   
+    vertical-align: top;
+    padding-left: 15px;
+}
+.nav-option :hover{
+    color: var(--primary-color);
+    background-color: rgb(229, 246, 252);
+    border-radius: 50px;
+}
+.nav-option .wide-button{
+    margin: 20px 15px;
+}
+/* Main */
+main{
+    flex: 2;
+    width: 100vw;
+}
+main header{
+    padding: 2% 3% 0 3%;
+    border-bottom: 2px solid var(--secondary-color-darkest);
+    /* position: fixed; */
+}
+input{
+    border-radius: 20px;
+    border: none;
+    background-color: var(--secondary-color-darkest) ;
+}
+input:hover{  
+    border-color:  var(--primary-color);
+    background-color: var(--white);
+}
+input:focus, button:focus{
+    outline: none;
+}
+
+#top-navbar li{
+    margin-top: 10px;
+    padding: 10px 3.8% 5px 3.8%;
+}
+.tab-content{
+    scroll-snap-type: proximity ;
+}
+.main-story{
+    background-image: url("../assets/vaccinating-man.jpg");
+    height: 25vw;
+    width: 100%;
+    background-size: contain;
+    
+}
+.headline {
+    background-image: linear-gradient( black, rgb(0, 0, 0, 0));
+    padding: 3%;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.headline a{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2vw;
+}
+.headline h6{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1vw;
+}
+.trend{
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid var(--secondary-color-darkest);
+}
+.trend:hover{
+    background-color: var(--secondary-color);
+}
+.trend h6{
+    color: var(--secondary-color-font);
+    font-size: 1vw;
+    font-weight: 400;
+}
+.trend h3{
+    font-size: 1.5vw;
+}
+
+.tweets{
+    position: relative;
+}
+.tweet{
+    padding: 10px;
+    border-bottom: 1px solid var(--secondary-color-darkest);
+}
+.tweet:hover{
+    background-color: var(--secondary-color);
+}
+.tweet-text{
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.tweet-text>p{
+    font-size: 1.1vw;
+    padding-top: 5px;
+}
+.media{
+    /* width: 3vw; */
+    padding: 10px 10px 0 0;
+}
+.media>img{
+    border: 2px solid var(--white) ;
+    border-radius: 20px;
+}
+.tweet-engagement{
+    padding: 0 40px;
+    justify-content: space-between;
+}
+.tweet-engagement>div{
+    position: relative;
+}
+.tweet-engagement .count{
+    vertical-align: super;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+.engage-logo{
+    display: inline;
+    height: 20px;
+}
+
+section>div, section>ul{
+    border-bottom: 10px solid var(--secondary-color-darkest);
+}
+
+/* Side bar */
+aside{
+    /* margin: 20px; */
+    padding: 2% 3%;
+    align-items: center;
+    flex: 1;
+}
+.follow-list-container{
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+}
+.follow-list{
+    position: relative;
+}
+.follow-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 2% 0;
+}
+
+.follow-item:hover{
+    background-color: var(--secondary-color-dark);
+}
+
+.follow-list-container>p{
+    padding: 5%;
+}
+.follow-list-container>h3{
+    margin: 5% 5% 0 5% ;
+}
+
+.follow-list-container a{
+    /* margin: 5%; */
+    padding: 5% 0;
+    color: var(--primary-color);
+}
+
+.follow-item, .follow-list-container>p{
+    border-top: 1px solid var(--secondary-color-darkest);
+}
+.follow-item>.user{
+    flex: 4;
+}
+.follow-item>.dp-mini, .follow-item>.small-button{
+    flex: 1;
+    padding-right: 10px;
+}
+
+
+/* Footer */
+footer{
+    padding: 5%;
+    font-size: 11px;
+    color: var(--secondary-color-dark);
+    
+}
+footer li{
+    padding:  3px 5px;
+}
+footer a:hover{
+    text-decoration-line: underline;
+}
+
+
+
+/* global */
+hr{
+    border: 1px solid var(--secondary-color-darkest);
+    width: 100%;
+    height: 90%;
+}
+ul{
+    list-style: none;
+    text-decoration-style: none;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+
+img .logo{
+    height: 30px;
+}
+button{
+    height: 30px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+}
+ul>.current-tab{
+    border-bottom: 3px solid var(--primary-color);
+}
+ul>.current-tab:hover{
+    background-color: rgb(232, 240, 243);
+    border-radius: 5px;
+}
+.bordered{
+    border: 5px solid red ;
+    border: 1px solid var(--secondary-color-darkest) ;
+}
+.wide-button{
+    margin: 20px 15px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 90%;
+    font-size: 16px;
+    font-weight: bold;
+}
+.wide-button:hover{
+    background-color: var(--primary-color-dark);
+}
+.small-button{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.small-button:hover{
+    background-color: rgb(232, 240, 243); 
+}
+
+
+.dp-mini{
+    height: 5vw;
+    border: 1px solid var(--secondary-color);
+    border-radius: 90px;
+}
+.search{
+    padding-left: 20px;
+    height: 40px;
+    width: 100%;
+}
+.search:hover{
+    border : 2px solid var(--primary-color);
+}
+.current-tab>a>h3{
+    color: var(--primary-color);
+}
+.name{
+    font-size: 1.3vw;
+    font-weight: 700;
+    text-align: left;
+    padding-right: 3px;
+}
+.username, .time{
+    font-size: 1.2vw;
+    font-weight: 400;
+    text-align: left;
+    padding-right: 5px;
+}
+.count{
+    height: 5px;
+}
+
+@media screen and (max-width : 1200px) {
+    main{
+        flex: 1;
+    }
+    .nav-option{
+        justify-content: left;
+        height: 40px;
+        width: 30%;
+        padding: 10px 3% 10px 13% ;
+    }
+    .nav-option-text{
+        visibility: hidden;
+        font-size: 0px;
+    }
+
+}
+@media only screen and (max-width : 1022px) {
+    
+    main{
+        width: 70%;
+    }
+    aside{
+        visibility: hidden;
+        width :0%;
+    }
+    
+}
